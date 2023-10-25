@@ -1,0 +1,14 @@
+{% extends 'master.html' %}
+{% block content %}
+    <h2>Register here</h2>
+    <form method="post"  action="{% url 'register' %}">
+    {% csrf_token %}
+        <input name="a" required placeholder="name" type="text"><br><br>
+        <input name="b" required placeholder="email" type="email"><br><br>
+        <input name="c" required placeholder="password" type="password"><br><br>
+        <input  value="Register" type="submit"><br><br>
+    </form>
+    <p>{{ jina }}</p>
+    <p>{{ arafa }}</p>
+    <p>{{ siri }}</p>
+{% endblock %}
